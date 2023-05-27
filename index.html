@@ -18,10 +18,15 @@
             text-shadow: 0 0 10px blue;
         }
         
-        .typewriter {
-            overflow: hidden;
+        .typewriter-container {
+            display: inline-block;
             white-space: nowrap;
-            border-right: 2px solid white;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .typewriter {
+            position: relative;
             animation: typing 4s steps(7) 1s 1 normal both,
                        neon-colors 5s infinite;
         }
@@ -40,26 +45,25 @@
             71% { color: yellow; text-shadow: 0 0 10px yellow; }
             85% { color: #FFDDC1; text-shadow: 0 0 10px #FFDDC1; }
         }
-        
-        @keyframes blink-caret {
-            from, to { border-color: transparent; }
-            50% { border-color: white; }
-        }
     </style>
 </head>
 <body>
     <h1 class="neon-text">
-        <span class="typewriter">C</span>
-        <span class="typewriter">o</span>
-        <span class="typewriter">m</span>
-        <span class="typewriter">i</span>
-        <span class="typewriter">n</span>
-        <span class="typewriter">g</span>
-        <span class="typewriter">&nbsp;</span>
-        <span class="typewriter">S</span>
-        <span class="typewriter">o</span>
-        <span class="typewriter">o</span>
-        <span class="typewriter">n</span>
+        <span class="typewriter-container">
+            <span class="typewriter">C</span>
+            <span class="typewriter">o</span>
+            <span class="typewriter">m</span>
+            <span class="typewriter">i</span>
+            <span class="typewriter">n</span>
+            <span class="typewriter">g</span>
+        </span>
+        <span class="typewriter-container">
+            <span class="typewriter">&nbsp;</span>
+            <span class="typewriter">S</span>
+            <span class="typewriter">o</span>
+            <span class="typewriter">o</span>
+            <span class="typewriter">n</span>
+        </span>
     </h1>
 </body>
 </html>
