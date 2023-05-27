@@ -9,6 +9,8 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
+            opacity: 0;
+            transition: opacity 1s;
         }
         
         .neon-text {
@@ -65,5 +67,28 @@
             <span class="typewriter">n</span>
         </span>
     </h1>
+
+    <script>
+        setTimeout(function() {
+            document.body.style.opacity = 1;
+            typewriterEffect();
+        }, 1500); // Fade-in effect after 1.5 seconds
+
+        function typewriterEffect() {
+            var text = "It will be downloaded soon.";
+            var i = 0;
+            var speed = 100; // Speed of typewriter effect in milliseconds
+
+            function type() {
+                if (i < text.length) {
+                    document.body.innerHTML += text.charAt(i);
+                    i++;
+                    setTimeout(type, speed);
+                }
+            }
+
+            type();
+        }
+    </script>
 </body>
 </html>
