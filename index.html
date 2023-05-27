@@ -1,26 +1,57 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <title>Coming Soon</title>
     <style>
-        /* Define the neon effect for the text */
-        @keyframes neon {
-            0%   { color: #ff00ff; }
-            25%  { color: #ff99ff; }
-            50%  { color: #ff00ff; }
-            75%  { color: #ff99ff; }
-            100% { color: #ff00ff; }
+        body {
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
         }
-
-        /* Apply the neon effect to the text */
+        
         .neon-text {
-            font-family: "Courier New", monospace;
-            font-size: 36px;
-            text-align: center;
-            animation: neon 2s infinite;
+            font-family: 'Courier New', monospace;
+            font-size: 48px;
+            color: blue;
+            text-shadow: 0 0 10px blue;
+            animation: neon-colors 5s infinite;
+        }
+        
+        @keyframes neon-colors {
+            0% { color: blue; text-shadow: 0 0 10px blue; }
+            14% { color: red; text-shadow: 0 0 10px red; }
+            28% { color: green; text-shadow: 0 0 10px green; }
+            42% { color: brown; text-shadow: 0 0 10px brown; }
+            57% { color: purple; text-shadow: 0 0 10px purple; }
+            71% { color: yellow; text-shadow: 0 0 10px yellow; }
+            85% { color: #FFDDC1; text-shadow: 0 0 10px #FFDDC1; }
+        }
+        
+        .typewriter {
+            overflow: hidden;
+            white-space: nowrap;
+            animation: typewriter-effect 4s steps(7) 1s 1 normal both,
+                       blink-caret 0.75s step-end infinite;
+        }
+        
+        @keyframes typewriter-effect {
+            0% { width: 0; }
+            20% { width: 1ch; }
+            40% { width: 2ch; }
+            60% { width: 3ch; }
+            80% { width: 4ch; }
+            100% { width: 7ch; }
+        }
+        
+        @keyframes blink-caret {
+            from, to { border-color: transparent; }
+            50% { border-color: white; }
         }
     </style>
 </head>
 <body>
-    <h1 class="neon-text">Coming Soon</h1>
+    <h1 class="neon-text typewriter">Coming Soon</h1>
 </body>
 </html>
